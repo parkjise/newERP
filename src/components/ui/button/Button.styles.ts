@@ -105,22 +105,20 @@ const variantStyles = {
  * styled-components에선 `&&`로 우선순위를 올려주는게 흔한 패턴
  */
 export const ButtonStyles = styled(AntButton)<StyledProps>`
-  && {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    box-shadow: none;
-    ${({ $fullWidth }) => ($fullWidth ? "width: 100%;" : "")}
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: none;
+  ${({ $fullWidth }) => ($fullWidth ? "width: 100%;" : "")}
 
-    ${({ $size }) => sizeStyles[$size]}
+  ${({ $size }) => sizeStyles[$size]}
     ${({ $variant }) => variantStyles[$variant]}
 
     /* disabled 공통 */
     &:disabled,
     &.ant-btn-disabled {
-      opacity: 0.5;
-      cursor: not-allowed;
-    }
+    opacity: 0.5;
+    cursor: not-allowed;
   }
 `;

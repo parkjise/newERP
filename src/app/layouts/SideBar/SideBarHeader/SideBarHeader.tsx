@@ -4,6 +4,7 @@ import {
   HeadingText,
   HeadingContent,
   HeadingIcon,
+  HeadingBadge,
 } from "./SideBarHeader.styles";
 
 const SideBarHeader = () => {
@@ -15,9 +16,12 @@ const SideBarHeader = () => {
         </HeadingIcon>
         <HeadingContent>
           <HeadingText className="sidebar__heading-text">즐겨찾기</HeadingText>
-          <span className="sidebar__heading-badge" aria-label="즐겨찾기 개수">
+          <HeadingBadge
+            className="sidebar__heading-badge"
+            aria-label="즐겨찾기 개수"
+          >
             5
-          </span>
+          </HeadingBadge>
         </HeadingContent>
       </Heading>
     </SideBarHeaderRoot>

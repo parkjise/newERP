@@ -16,3 +16,6 @@ export type HeaderButton = {
   onClick?: () => void;
 };
 
+export type HeaderActions = {
+  clssName: string;
+};

@@ -20,7 +20,6 @@ export const CollapseButton = styled(Button)`
   &:focus,
   &:active {
     border: none !important;
-    background-color: transparent;
-    color: ${({ theme }) => theme.accent.primary};
+    background-color: transparent !important;
   }
 `;

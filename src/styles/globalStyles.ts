@@ -15,9 +15,10 @@ export const GlobalStyle = createGlobalStyle`
     height: 100vh;
     box-sizing: border-box;
     font-weight: 400;
-    letter-spacing: -0.5px;
+    /* letter-spacing: -0.5px; */
     font-family:"Pretendard" ;
     font-size: 62.5%;
+    color:  ${({ theme }) => theme.colors.grey[700]};
   }
 
   #root {
@@ -31,7 +32,7 @@ export const GlobalStyle = createGlobalStyle`
   *::after {
     box-sizing: border-box;
   }
-  ul,li,p{
+  ul,li,p,h2{
     margin: 0;
     padding: 0;
   }

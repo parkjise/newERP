@@ -2,7 +2,7 @@ import { HeaderStyles } from "@/app/layouts/Header/Header.styles";
 import { type HeaderProps } from "@/app/layouts/Header/Header.type";
 import HeaderLogo from "@/app/layouts/Header/HeaderLogo";
 import HeaderSearch from "@/app/layouts/Header/HeaderSearch";
-import HeaderActions from "@/app/layouts/Header/HeaderActions";
+import HeaderActions from "@/app/layouts/Header/HeaderAction/HeaderActions";
 
 const Header = ({ className }: HeaderProps) => {
   return (

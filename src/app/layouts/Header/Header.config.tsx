@@ -12,6 +12,7 @@ export const ICONS = {
   moon: <i className="ri-moon-line" />,
   sun: <i className="ri-sun-line" />,
   settings: <i className="ri-settings-3-line" />,
+  link: <i className="ri-links-line" />,
   user: <i className="ri-user-line" />,
 } as const;
 
@@ -24,7 +25,8 @@ export const getThemeIcon = (mode: ThemeMode): ReactNode => {
 export const createHeaderButtons = (
   mode: ThemeMode,
   toggleMode: () => void,
-  handleSettingClick: () => void
+  handleSettingClick: () => void,
+  handleAlramClick: () => void,
 ): HeaderButton[] => [
   {
     id: "alarm",
@@ -32,6 +34,7 @@ export const createHeaderButtons = (
     icon: ICONS.notification,
     label: "alarm",
     badge: 5,
+    onClick: handleAlramClick,
   },
   {
     id: "language",
@@ -52,6 +55,12 @@ export const createHeaderButtons = (
     icon: ICONS.settings,
     label: "setting",
     onClick: handleSettingClick,
+  },
+  {
+    id: "link",
+    modifier: "link",
+    icon: ICONS.link,
+    label: "link",
   },
   {
     id: "profile",

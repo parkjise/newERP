@@ -52,6 +52,18 @@ export const HeadingContent = styled.div`
   ${flex("center", "flex-start", "row", "10px")}
 `;
 
+export const HeadingBadge = styled.span`
+  background-color: #fff;
+  display: block;
+  font-size: 1.2rem;
+  padding: 0.1rem 0.8rem;
+  border-radius: 0.2rem;
+  color: ${({ theme }) => theme.accent.primary};
+  ${Heading}:hover & {
+    background-color: ${({ theme }) => theme.accent.menuActiveBg};
+  }
+`;
+
 export const HeadingText = styled.div`
   ${text("1.4rem")}
 `;
