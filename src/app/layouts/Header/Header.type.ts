@@ -17,5 +17,5 @@ export type HeaderButton = {
 };
 
 export type HeaderActions = {
-  clssName: string;
+  className: string;
 };

@@ -50,7 +50,7 @@ const HeaderActions = () => {
             className={`header__button header__button--${modifier}`}
           />
         ))}
-        <AlarmPanel clssName={showAlram} />
+        <AlarmPanel className={showAlram} />
       </HeaderUtilsRoot>
       <ThemeColorModal
         open={showColorModal}

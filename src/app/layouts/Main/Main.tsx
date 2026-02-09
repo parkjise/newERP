@@ -1,14 +1,14 @@
-import React from "react";
 import { MainStyles } from "@/app/layouts/Main/Main.styles";
+import Home from "@/pages/Home/Home";
 type Props = {
-    className?: string;
-}
+  className?: string;
+};
 const Main = ({ className }: Props) => {
-    return (
-        <MainStyles className={className}>
-            <h1>Main</h1>
-        </MainStyles>
-    );
+  return (
+    <MainStyles className={className}>
+      <Home />
+    </MainStyles>
+  );
 };
 
 export default Main;

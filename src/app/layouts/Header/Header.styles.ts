@@ -8,7 +8,7 @@ export const HeaderStyles = styled.header`
   ${flex("center", "space-between")}
   padding-right: 3rem;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.02);
-
+  z-index: 2;
   & .header {
     &__main {
       ${flex("center", "flex-start", "row")}

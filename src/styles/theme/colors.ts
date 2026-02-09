@@ -30,4 +30,6 @@ export const colors = {
   darknavy: "#1A325B",
   mdi: "#162B4D",
   error: "#CC1919",
+  notice: "#F05B5B",
+  update: "#3aa8ff",
 };

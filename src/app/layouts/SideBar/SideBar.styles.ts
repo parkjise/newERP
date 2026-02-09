@@ -8,6 +8,8 @@ export const SideBarRoot = styled.aside`
   transition: background-color 0.3s ease;
   ${flex("flex-start", "space-between", "column")}
   padding-top: 2rem;
+  position: relative;
+  z-index: 100;
 `;
 
 export const SideBarInner = styled.div`

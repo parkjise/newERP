@@ -1,14 +1,15 @@
 import styled from "styled-components";
-import { text, flex } from "@/styles/mixins/index";
+import { text, flex, conditionalAbsolute } from "@/styles/mixins/index";
 export const NotificationRoot = styled.section`
-  display: block;
-  position: absolute;
+  display: none;
   background-color: #fff;
   width: 30rem;
-  top: 4.8rem;
-  left: 0px;
   border-radius: 0.4rem;
-
+  ${conditionalAbsolute({
+    enabled: true,
+    top: "4.8rem",
+    left: "0",
+  })}
   &.active {
     display: block;
   }
@@ -41,9 +42,14 @@ export const NotificationList = styled.div`
     &__icon {
       width: 4rem;
       height: 4rem;
-      background-color: #3aa8ff;
       border-radius: 0.8rem;
       ${flex("center", "center")}
+      &.update {
+        background-color: ${({ theme }) => theme.colors.update};
+      }
+      &.notice {
+        background-color: ${({ theme }) => theme.colors.notice};
+      }
       i {
         font-size: 2.4rem;
         color: ${({ theme }) => theme.colors.white};
