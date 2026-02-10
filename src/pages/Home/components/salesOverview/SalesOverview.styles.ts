@@ -9,5 +9,6 @@ export const SalesOverviewRoot = styled.section`
       rgba(255, 255, 255, 0.9) 0%,
       rgba(243, 243, 243, 1) 100%
     );
+    opacity: 0.9;
   }
 `;

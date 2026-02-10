@@ -32,8 +32,14 @@ export const GlobalStyle = createGlobalStyle`
   *::after {
     box-sizing: border-box;
   }
-  ul,li,p,h2{
+  ul,li,p,h2,figure{
     margin: 0;
     padding: 0;
+  }
+
+  dl , dt , dd {
+    margin-inline-start: 0px;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
   }
 `;

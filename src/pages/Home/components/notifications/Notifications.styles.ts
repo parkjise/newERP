@@ -7,8 +7,8 @@ export const NotificationsRoot = styled.section`
     background: linear-gradient(
       120deg,
       rgba(255, 255, 255, 1) 0%,
-      rgba(243, 243, 243, 0.7) 100%
+      rgba(255, 255, 255, 0.7) 100%
     );
-    opacity: 0.7;
+    opacity: 0.9;
   }
 `;

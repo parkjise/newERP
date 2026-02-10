@@ -5,9 +5,9 @@ export const ErpApprovalRoot = styled.section`
   &:before {
     background: linear-gradient(
       120deg,
-      rgba(255, 255, 255, 0.4) 0%,
-      rgba(243, 243, 243, 0.7) 100%
+      rgba(255, 255, 255, 0.9) 0%,
+      rgba(255, 255, 255, 0.7) 100%
     );
-    opacity: 0.7;
+    opacity: 0.9;
   }
 `;

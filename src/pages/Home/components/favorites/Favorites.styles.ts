@@ -6,9 +6,9 @@ export const FavoritesRoot = styled.section`
   &:before {
     background: linear-gradient(
       120deg,
-      rgba(255, 255, 255, 0.7) 0%,
-      rgba(243, 243, 243, 1) 100%
+      rgba(255, 255, 255, 0.9) 0%,
+      rgba(255, 255, 255, 0.6) 100%
     );
-    opacity: 0.7;
+    opacity: 0.9;
   }
 `;
