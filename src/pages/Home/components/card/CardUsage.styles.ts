@@ -5,7 +5,7 @@ export const CardusageRoot = styled.section`
   padding: 10px 20px;
   background: linear-gradient(
     120deg,
-    rgba(133, 153, 188, 1) 30%,
+    rgba(133, 153, 188, 1) 0%,
     rgba(61, 90, 139, 1) 100%
   );
   &::before {

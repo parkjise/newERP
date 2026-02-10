@@ -21,11 +21,11 @@ const Home = () => {
         <ParthnersSales />
         <SalesOverview />
         <MyVouchers />
-        <ErpApproval />
         <div className="dashboard__col dashboard__col--stack">
           <Notifications />
           <Notice />
         </div>
+        <ErpApproval />
         <PnlOverview />
       </DashboardLayout>
     </Dashboard>
