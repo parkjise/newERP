@@ -1,4 +1,6 @@
-import { CardusageRoot } from "./CardUsage.styles";
+import { CardusageRoot, CardusageMain } from "./CardUsage.styles";
+import Footer from "./Footer";
+import Header from "./Header";
 
 const CardUsage = () => {
   return (
@@ -6,9 +8,21 @@ const CardUsage = () => {
       className="dashboard__widget dashboard__widget--card-usage"
       aria-labelledby="dashboard-card-usage-title"
     >
-      <h2 id="dashboard-card-usage-title" className="dashboard__widget-title">
-        카드 사용 현황
-      </h2>
+      <Header />
+      <CardusageMain className="card-usage__content">
+        <dl className="card-usage__summary">
+          <div className="card-usage__summary-item">
+            <dt className="card-usage__summary-label">이번달 총 사용량</dt>
+            <dd
+              className="card-usage__summary-value"
+              aria-label="이번달 총 사용량 112,250,000원"
+            >
+              112,250,000
+            </dd>
+          </div>
+        </dl>
+      </CardusageMain>
+      <Footer />
     </CardusageRoot>
   );
 };

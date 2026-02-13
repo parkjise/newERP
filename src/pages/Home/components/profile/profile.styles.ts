@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { flex, text } from "@/styles/mixins/index";
+import { flex, text } from "@/styles/mixins";
 export const ProfileRoot = styled.section`
   position: relative;
   padding: 20px;
@@ -7,14 +7,6 @@ export const ProfileRoot = styled.section`
   height: 100%;
   display: flex;
   flex-direction: column;
-  &:before {
-    background: linear-gradient(
-      120deg,
-      rgba(255, 255, 255, 1) 0%,
-      rgba(255, 255, 255, 0.7) 100%
-    );
-    opacity: 0.9;
-  }
 `;
 
 export const ProfileHeader = styled.header`
@@ -27,10 +19,10 @@ export const ProfileHeader = styled.header`
     background-color: transparent;
     border: none;
     box-shadow: none;
-    color: ${({ theme }) => theme.colors.neutral[700]};
+    color: ${({ theme }) => theme.colors.neutral[600]};
     ${text("18px")}
     &:hover {
-      color: ${({ theme }) => theme.colors.neutral[900]} !important;
+      color: ${({ theme }) => theme.colors.neutral[800]} !important;
       background-color: transparent !important;
       border: transparent !important;
       box-shadow: transparent !important;
@@ -43,7 +35,7 @@ export const ProfileBody = styled.div`
   .profile__panel {
     width: 100%;
     &--secondary {
-      ${flex("", "flex-start", "column", "10px")}
+      ${flex("", "flex-start", "column", "20px")}
     }
   }
 `;
@@ -59,7 +51,7 @@ export const ProfileIdentity = styled.div`
     &__name {
       ${flex("flex-start", "flex-start", "column")}
       &-text {
-        ${text("15px", 400)}
+        ${text("16px", 400)}
         color: ${({ theme }) => theme.colors.neutral[800]};
       }
     }
@@ -153,20 +145,20 @@ export const ProfileAnnual = styled.section`
       }
       &-item {
         height: 100%;
-        ${flex("center", "center", "column", "10px")}
+        ${flex("center", "center", "column")}
         padding: 10px;
         flex: 1;
         border-radius: 4px;
         background: #f7f8f9;
-
         border: 1px solid #efefef;
+        max-height: 67px;
       }
       &-term {
         ${text("12px", 300)}
         color: ${({ theme }) => theme.colors.neutral[600]};
       }
       &-desc {
-        ${text("16px", 500)}
+        ${text("18px", 700)}
         color: ${({ theme }) => theme.colors.neutral[800]};
       }
     }

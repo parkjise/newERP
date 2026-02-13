@@ -21,9 +21,9 @@ const Profile = () => {
         <Button
           className="profile__edit-button"
           icon={<i className="ri-settings-3-line"></i>}
-        ></Button>
+        />
       </ProfileHeader>
-      <ProfileBody className="profile__body">
+      <ProfileBody className="widget__body profile__body">
         <section
           className="profile__panel profile__panel--primary"
           aria-label="사용자 정보"

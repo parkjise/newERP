@@ -1,4 +1,6 @@
 import { css } from "styled-components";
+export { flex, flexBetween, flexCenter } from "./mixins/flex";
+export { text, remixiFont } from "./mixins/utils";
 
 type GridOptions = {
   columns?: string;

@@ -2,7 +2,6 @@
 import styled, { css } from "styled-components";
 import { Button as AntButton } from "antd";
 import type { ButtonVariant, ButtonSize } from "./types";
-import * as mixins from "@/styles/mixins";
 
 type StyledProps = {
   $variant: ButtonVariant;

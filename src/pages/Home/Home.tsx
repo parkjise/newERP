@@ -1,4 +1,4 @@
-import { Dashboard, DashboardLayout } from "./Home.styles";
+import { Dashboard, DashboardLayout, Col } from "./Home.styles";
 import Profile from "./components/profile/Profile";
 import Favorites from "./components/favorites/Favorites";
 import CardUsage from "./components/card/CardUsage";
@@ -14,17 +14,17 @@ const Home = () => {
     <Dashboard className="dashboard" aria-label="대시보드">
       <DashboardLayout className="dashboard__layout">
         <Profile />
-        <div className="dashboard__col dashboard__col--stack">
+        <Col className="dashboard__col dashboard__col--stack">
           <Favorites />
           <CardUsage />
-        </div>
+        </Col>
         <ParthnersSales />
         <SalesOverview />
         <MyVouchers />
-        <div className="dashboard__col dashboard__col--stack">
+        <Col className="dashboard__col dashboard__col--stack">
           <Notifications />
           <Notice />
-        </div>
+        </Col>
         <ErpApproval />
         <PnlOverview />
       </DashboardLayout>

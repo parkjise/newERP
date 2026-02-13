@@ -1,10 +1,10 @@
 import styled from "styled-components";
-import * as mixins from "@/styles/mixins";
+import { grid } from "@/styles/mixins";
 export const LayoutStyles = styled.div`
   width: 100%;
   height: 100%;
   background-color: #000;
-  ${mixins.grid({
+  ${grid({
     columns: "220px 1fr",
     rows: "60px 1fr",
   })}

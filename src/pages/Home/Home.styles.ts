@@ -1,10 +1,11 @@
 import styled from "styled-components";
-import { grid, absoluteCenterXY, flex } from "@/styles/mixins/index";
+import { flex, grid, text, absoluteCenterXY } from "@/styles/mixins";
 
 export const Dashboard = styled.div`
   width: 100%;
   height: 100%;
   ${flex("center", "center")}
+  background-color: #F2F4F6;
 `;
 
 export const DashboardLayout = styled.div`
@@ -19,51 +20,87 @@ export const DashboardLayout = styled.div`
   })}
   padding: 6rem 10rem;
   .dashboard {
-    &__col {
-      width: 100%;
-      height: 100%;
-      ${flex("flex-start", "flex-start", "column", "20px")}
-    }
     &__widget {
+      ${flex("flex-start", "flex-start", "column", "15px")}
       width: 100%;
       position: relative;
       border-radius: 1.5rem;
       background-color: #fff;
-      /* box-shadow: 14.65px 17.58px 29.29px rgba(0, 0, 0, 0.03); */
-      /* &:before {
-        content: "";
-        position: absolute;
-        inset: 0;
+      padding: 20px;
+      transition: box-shadow 0.3s ease;
+      &:hover {
+        box-shadow: 5px 25px 35px rgba(0, 0, 0, 0.08);
+      }
+      .widget__head {
+        width: 100%;
+        ${flex("center", "space-between")}
+      }
+      .widget__title {
+        ${text("15px", 500)}
+        color: ${({ theme }) => theme.colors.neutral[800]};
+      }
+      .widget__body {
         width: 100%;
         height: 100%;
-        z-index: -1;
-        border-radius: 1.5rem;
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
       }
-      &:after {
-        content: "";
-        position: absolute;
-        inset: 0;
-        border-radius: 1.5rem;
-        padding: 1px;
-        background: linear-gradient(
-          180deg,
-          rgba(255, 255, 255, 0.5) 0%,
-          rgba(255, 255, 255, 0.23) 100%
-        );
-        -webkit-mask:
-          linear-gradient(#fff 0 0) content-box,
-          linear-gradient(#fff 0 0);
-        -webkit-mask-composite: xor;
-        mask:
-          linear-gradient(#fff 0 0) content-box,
-          linear-gradient(#fff 0 0);
-        mask-composite: exclude;
-        pointer-events: none;
-      } */
+      .widget__refresh {
+        width: 24px;
+        height: 24px;
+        border-color: transparent;
+        background-color: transparent;
+        ${text("18px")};
+        color: ${({ theme }) => theme.colors.neutral[600]};
+        &:hover,
+        &:active,
+        &:focus {
+          border-color: transparent;
+          color: ${({ theme }) => theme.colors.neutral[800]};
+        }
+      }
+      .approval-icon {
+        ${flex("center", "center")}
+        border-radius: 10px;
+        width: 34px;
+        height: 34px;
+        i {
+          ${text("20px")}
+        }
+        &--total {
+          background-color: #eeeeee;
+          color: #717171;
+        }
+        &--progress {
+          background-color: #dff2fa;
+          color: #02b4fa;
+        }
+        &--hold {
+          background-color: #fdeddc;
+          color: #f88914;
+        }
+        &--rejected {
+          background-color: #ffedf1;
+          color: #e03f61;
+        }
+        &--completed {
+          background-color: #e2f2ee;
+          color: #38cab3;
+        }
+        &--pending-approval {
+          background-color: #edf0ff;
+          color: #6480f5;
+        }
+      }
+      .approval-count {
+        ${text("24px", 600)}
+        color: ${({ theme }) => theme.colors.neutral[800]};
+      }
+      .approval-text {
+        ${text("13px", 300)}
+        color: ${({ theme }) => theme.colors.neutral[800]};
+      }
     }
   }
+
   &::before {
     display: block;
     ${absoluteCenterXY()}
@@ -74,5 +111,18 @@ export const DashboardLayout = styled.div`
     border-radius: 50%;
     z-index: -1;
     filter: blur(150px);
+  }
+`;
+
+export const Col = styled.div`
+  &.dashboard {
+    &__col {
+      width: 100%;
+      height: 100%;
+      ${grid({
+        rows: "1fr 1fr",
+        rowGap: "20px",
+      })}
+    }
   }
 `;

@@ -32,9 +32,10 @@ export const GlobalStyle = createGlobalStyle`
   *::after {
     box-sizing: border-box;
   }
-  ul,li,p,h2,figure{
+  ul,ol,li,p,h2,figure{
     margin: 0;
     padding: 0;
+    list-style: none;
   }
 
   dl , dt , dd {
@@ -42,4 +43,5 @@ export const GlobalStyle = createGlobalStyle`
     margin-block-start: 0em;
     margin-block-end: 0em;
   }
+  
 `;
