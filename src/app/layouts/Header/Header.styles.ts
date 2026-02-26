@@ -3,7 +3,7 @@ import { flex } from "@/styles/mixins/index";
 export const HeaderStyles = styled.header`
   position: relative;
   height: 6rem;
-  background-color: ${({ theme }) => theme.colors.white};
+  background-color: ${({ theme }) => theme.colors.common[100]};
   border-bottom: 1px solid ${({ theme }) => theme.colors.grey[200]};
   ${flex("center", "space-between")}
   padding-right: 3rem;

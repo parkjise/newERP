@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const CardusageHeader = styled.header`
   && .card-usage {
     &__title {
-      color: ${({ theme }) => theme.colors.white};
+      color: ${({ theme }) => theme.colors.common[100]};
     }
 
     &__actions {
@@ -13,10 +13,10 @@ export const CardusageHeader = styled.header`
       background-color: #7a95c2;
       border: 1px solid #5b7095;
       .ant-select-content-value {
-        color: ${({ theme }) => theme.colors.white};
+        color: ${({ theme }) => theme.colors.common[100]};
       }
       .anticon-down {
-        color: ${({ theme }) => theme.colors.white};
+        color: ${({ theme }) => theme.colors.common[100]};
       }
     }
   }

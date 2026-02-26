@@ -1,5 +1,6 @@
-import Header from "./Header";
+import Header from "@/pages/Home/components/header/Header";
 import { NotificationsRoot, NotificationsBody } from "./Notifications.styles";
+import Button from "@/components/ui/button";
 const notificationsList = [
   {
     id: 1,
@@ -26,7 +27,25 @@ const Notifications = () => {
       className="dashboard__widget dashboard__widget--notifications"
       aria-labelledby="dashboard-notifications-title"
     >
-      <Header />
+      <Header
+        title="알림"
+        className="widget__head notifications__header"
+        titleClassName="widget__title notifications__title"
+        titleExtra={
+          <p className="notifications__meta" aria-live="polite">
+            <span className="notifications__meta-label">읽지않음</span>
+            <span className="notifications__unread-count">1</span>
+          </p>
+        }
+      >
+        <div className="widget__actions notifications__actions">
+          <Button
+            className="widget__refresh"
+            icon={<i className="ri-restart-line" aria-hidden="true" />}
+            aria-label="새로고침"
+          />
+        </div>
+      </Header>
       <NotificationsBody className="widget__body notifications__body">
         <ul className="notifications__list" aria-label="알림 목록">
           {notificationsList.map((list) => (

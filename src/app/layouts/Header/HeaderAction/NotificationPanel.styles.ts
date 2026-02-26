@@ -52,7 +52,7 @@ export const NotificationList = styled.div`
       }
       i {
         font-size: 2.4rem;
-        color: ${({ theme }) => theme.colors.white};
+        color: ${({ theme }) => theme.colors.common[100]};
       }
     }
     &__content {

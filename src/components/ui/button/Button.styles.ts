@@ -114,9 +114,10 @@ export const ButtonStyles = styled(AntButton)<StyledProps>`
   ${({ $size }) => sizeStyles[$size]}
     ${({ $variant }) => variantStyles[$variant]}
 
-    /* disabled 공통 */
-    &:disabled,
-    &.ant-btn-disabled {
+   
+  /* disabled 공통 */
+  &:disabled,
+  &.ant-btn-disabled {
     opacity: 0.5;
     cursor: not-allowed;
   }

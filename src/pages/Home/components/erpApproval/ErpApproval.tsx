@@ -1,5 +1,6 @@
 import { ErpApprovalRoot } from "./ErpApproval.styles";
-import Header from "./Header";
+import Header from "@/pages/Home/components/header/Header";
+import Button from "@/components/ui/button";
 const erpApprovalList = [
   {
     id: 1,
@@ -50,7 +51,19 @@ const ErpApproval = () => {
       className="dashboard__widget dashboard__widget--erp-approval"
       aria-labelledby="dashboard-erp-approval-title"
     >
-      <Header />
+      <Header
+        title="ERP 결재현황"
+        className="widget__head erp-approval__header"
+        titleClassName="widget__title erp-approval__widget"
+      >
+        <div className="widget__actions erp-approval__actions">
+          <Button
+            className="widget__refresh"
+            icon={<i className="ri-restart-line" aria-hidden="true" />}
+            aria-label="새로고침"
+          />
+        </div>
+      </Header>
       <div className="widget__body erp-approval__body">
         {erpApprovalList.map((list) => (
           <dl className="erp-approval__list" key={list.id}>

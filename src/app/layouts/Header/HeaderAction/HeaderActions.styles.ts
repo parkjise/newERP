@@ -36,11 +36,11 @@ export const HeaderButton = styled(Button)`
       }
     }
     .header__badge {
-      ${absolute({ top: "-10px", right: "-10px" })}
+      ${absolute({ top: "-5px", right: "-8px" })}
       width: 2rem;
       height: 1.5rem;
       ${text("1.1rem", 600, "15px")}
-      color: ${({ theme }) => theme.colors.white};
+      color: ${({ theme }) => theme.colors.common[100]};
       background-color: ${({ theme }) => theme.colors.red};
       border-radius: 0.8rem;
     }

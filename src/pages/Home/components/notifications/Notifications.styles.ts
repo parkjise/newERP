@@ -4,13 +4,7 @@ export const NotificationsRoot = styled.section`
   flex: 1;
   height: 100%;
   min-height: 0;
-`;
-
-export const NotificationsHeader = styled.header`
   .notifications {
-    &__heading {
-      ${flex("center", "flex-start", "row", "10px")}
-    }
     &__meta {
       ${text("12px", 500)}
     }
@@ -18,6 +12,9 @@ export const NotificationsHeader = styled.header`
       padding-left: 3px;
       color: #dc3545;
     }
+  }
+  .widget__heading {
+    ${flex("center", "flex-start", "row", "10px")}
   }
 `;
 

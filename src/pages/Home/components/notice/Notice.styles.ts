@@ -35,7 +35,7 @@ export const NoticeBody = styled.div`
           width: 18px;
           height: 18px;
           ${text("12px", 700)}
-          color: ${({ theme }) => theme.colors.white};
+          color: ${({ theme }) => theme.colors.common[100]};
           background-color: #ff7a7a;
           text-align: center;
           border-radius: 4px;

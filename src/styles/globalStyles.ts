@@ -12,8 +12,6 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     width: 100%;
-    height: 100vh;
-    box-sizing: border-box;
     font-weight: 400;
     /* letter-spacing: -0.5px; */
     font-family:"Pretendard" ;
@@ -24,13 +22,15 @@ export const GlobalStyle = createGlobalStyle`
   #root {
     width: 100%;
     height: 100vh;
-    box-sizing: border-box;
   }
 
   *,
   *::before,
   *::after {
     box-sizing: border-box;
+  }
+  a{
+    text-decoration: none;
   }
   ul,ol,li,p,h2,figure{
     margin: 0;
@@ -43,5 +43,13 @@ export const GlobalStyle = createGlobalStyle`
     margin-block-start: 0em;
     margin-block-end: 0em;
   }
-  
+    :where(.css-dev-only-do-not-override-xbngoj).ant-btn:not(:disabled):not(
+      .ant-btn-disabled
+    ):hover {
+    background-color: transparent;
+  }
+  :where(.css-dev-only-do-not-override-xbngoj).ant-btn.ant-btn-variant-solid{
+    box-shadow: none;
+
+  }
 `;

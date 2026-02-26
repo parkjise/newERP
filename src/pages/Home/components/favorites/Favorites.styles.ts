@@ -58,6 +58,9 @@ export const FavoritesRoot = styled.section`
       }
       i {
         color: #fdc700;
+        &.active {
+          color: ${({ theme }) => theme.colors.neutral[400]};
+        }
       }
     }
     &__link {

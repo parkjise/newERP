@@ -1,5 +1,7 @@
-import Header from "./Header";
+import { useState } from "react";
+import Header from "@/pages/Home/components/header/Header";
 import { PartnersSalesRoot } from "./PartnersSales.styles";
+import { CommonSelect } from "@/components/ui/select/Select";
 const items = [
   { name: "엔비디아", amount: 225_214_125_232, ratio: 100, isTop: true },
   { name: "삼성전자", amount: 123_214_125_232, ratio: 80, isTop: false },
@@ -10,9 +12,33 @@ const items = [
 
 const ParthnersSales = () => {
   // const [isTop, setIsTop] = useState();
+  const [status, setStatus] = useState<
+    "pending" | "approved" | "rejected" | undefined
+  >(undefined);
+
   return (
     <PartnersSalesRoot className="dashboard__widget dashboard__widget--top-partners-sales">
-      <Header />
+      <Header
+        title="TOP 5 거래처별 매출"
+        className="widget__head top-partners-sales__header"
+        titleClassName="widget__title top-partners-sales-title"
+      >
+        <div className="top-partners-sales__actions">
+          <CommonSelect
+            label=""
+            placeholder="선택"
+            options={[
+              { label: "대기", value: "pending" },
+              { label: "승인", value: "approved" },
+              { label: "반려", value: "rejected" },
+            ]}
+            value={status}
+            // defaultValue={"dfdf"}
+            onChange={(v) => setStatus(v)}
+            style={{ width: 80 }}
+          />
+        </div>
+      </Header>
       <div className="widget__body top-partners-sales__body">
         <ol className="top-partners-sales__list">
           {items.map((item) => (

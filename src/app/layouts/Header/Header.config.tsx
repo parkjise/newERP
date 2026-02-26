@@ -3,6 +3,7 @@ import { type ReactNode } from "react";
 import {
   type HeaderButton,
   type ThemeMode,
+  type NotificationItem,
 } from "@/app/layouts/Header/Header.type";
 
 // 아이콘 상수
@@ -26,15 +27,16 @@ export const createHeaderButtons = (
   mode: ThemeMode,
   toggleMode: () => void,
   handleSettingClick: () => void,
-  handleAlramClick: () => void,
+  handleNotificationsClick: () => void,
+  unreadCount: number,
 ): HeaderButton[] => [
   {
     id: "alarm",
     modifier: "alarm",
     icon: ICONS.notification,
     label: "alarm",
-    badge: 5,
-    onClick: handleAlramClick,
+    badge: unreadCount > 0 ? unreadCount : undefined,
+    onClick: handleNotificationsClick,
   },
   {
     id: "language",
@@ -67,6 +69,28 @@ export const createHeaderButtons = (
     modifier: "profile",
     icon: ICONS.user,
     label: "profile",
+  },
+];
+
+// 알림
+export const notificationData: NotificationItem[] = [
+  {
+    id: 1,
+    title: "업데이트 알림",
+    date: "1일전",
+    state: "update",
+  },
+  {
+    id: 2,
+    title: "공지사항 알림",
+    date: "1일전",
+    state: "notice",
+  },
+  {
+    id: 3,
+    title: "공지사항 ",
+    date: "3일전",
+    state: "notice",
   },
 ];
 

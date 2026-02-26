@@ -1,4 +1,8 @@
 export const colors = {
+  common: {
+    0: "#000",
+    100: "#fff",
+  },
   neutral: {
     50: "#FEFEFE",
     100: "#FAFAFA",
@@ -23,6 +27,58 @@ export const colors = {
     800: "#3A404A",
     900: "#191F28",
   },
+
+  approval: {
+    status: {
+      // 전체  / 일반
+      total: {
+        text: "#717171",
+        background: "#eeeeee",
+      },
+      // 기안전
+      draft: {
+        text: "#757575",
+        background: "#eeeeee",
+      },
+      // 기안취소
+      canceled: {
+        text: "#9a6700",
+        background: "#fff8e1",
+      },
+
+      // 삭제
+      deleted: {
+        text: "#9e9e9e",
+        background: "#fafafa",
+      },
+      // 완료 / 결재 완료 / 승인
+      completed: {
+        text: "#38cab3",
+        background: "#e2f2ee",
+      },
+      // 진행중 / 결재중
+      inProgress: {
+        text: "#02b4fa",
+        background: "#dff2fa",
+      },
+      // 보류
+      onHold: {
+        text: "#f88914",
+        background: "#fdeddc",
+      },
+      // 반려
+      rejected: {
+        text: "#e03f61",
+        background: "#ffedf1",
+      },
+      // 대기 / 미수신 / 수신대기
+      pending: {
+        text: "#6480f5",
+        background: "#edf0ff",
+      },
+    },
+  },
+
   red: "#E21A22",
   white: "#fff",
   black: "#000",

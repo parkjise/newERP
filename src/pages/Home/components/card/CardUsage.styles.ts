@@ -23,15 +23,32 @@ export const CardusageRoot = styled.section`
     border-radius: 15px;
     box-shadow: 0px 25px 45px rgba(61, 90, 139, 0.2);
   }
+  .card-usage__title {
+    color: ${({ theme }) => theme.colors.common[100]};
+  }
+
+  .card-usage__actions {
+    width: 100px;
+  }
+  .card-usage__filter {
+    background-color: #7a95c2;
+    border: 1px solid #5b7095;
+    .ant-select-content-value {
+      color: ${({ theme }) => theme.colors.common[100]};
+    }
+    .anticon-down {
+      color: ${({ theme }) => theme.colors.common[100]};
+    }
+  }
 `;
 
 export const CardusageMain = styled.main`
   width: 100%;
-  .card-usage {
+  && .card-usage {
     &__content {
     }
     &__summary {
-      color: ${({ theme }) => theme.colors.white};
+      color: ${({ theme }) => theme.colors.common[100]};
       &-item {
         ${flex("center", "flex-end", "row", "20px")}
       }

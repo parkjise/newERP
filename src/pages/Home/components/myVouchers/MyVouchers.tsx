@@ -4,6 +4,7 @@ import {
   MyVouchersStats,
   MyVouchersStat,
 } from "./MyVouchers.styles";
+import Header from "@/pages/Home/components/header/Header";
 
 const approvalList = [
   {
@@ -42,11 +43,11 @@ const MyVouchers = () => {
       className="dashboard__widget dashboard__widget--my-vouchers"
       aria-labelledby="my-vouchers-title"
     >
-      <header className="widget__head my-vouchers__header">
-        <h2 id="my-vouchers-title" className="widget__title my-vouchers__title">
-          나의 전표현황
-        </h2>
-
+      <Header
+        title="나의 전표현황"
+        className="widget__head my-vouchers__header"
+        titleClassName="widget__title my-vouchers__title"
+      >
         <div className="widget__actions my-vouchers__actions">
           <Button
             className="widget__refresh"
@@ -54,7 +55,7 @@ const MyVouchers = () => {
             aria-label="새로고침"
           />
         </div>
-      </header>
+      </Header>
       <div className="widget__body my-vouchers__body">
         <MyVouchersStats
           className="my-vouchers__stats"

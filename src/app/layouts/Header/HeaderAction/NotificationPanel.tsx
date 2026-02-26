@@ -1,4 +1,5 @@
-import { type HeaderActions } from "@/app/layouts/Header/Header.type";
+import { type NotificationProps } from "@/app/layouts/Header/Header.type";
+
 import {
   NotificationRoot,
   NotificationHeader,
@@ -9,31 +10,17 @@ import {
 import Button from "@/components/ui/button";
 import { CommonTag } from "@/components/ui/tag";
 
-type NotificationState = "update" | "notice";
+const NotificationPanel = ({
+  className,
+  notifications,
+  setNotifications,
+}: NotificationProps) => {
+  const unreadCount = notifications.length;
+  // 알림 삭제
+  const handleDelete = (id: number) => {
+    setNotifications((prev) => prev.filter((item) => item.id !== id));
+  };
 
-interface Notification {
-  id: number;
-  title: string;
-  date: string;
-  state: NotificationState;
-}
-
-const notificationData: Notification[] = [
-  {
-    id: 1,
-    title: "업데이트 알림",
-    date: "1일전",
-    state: "update",
-  },
-  {
-    id: 2,
-    title: "공지사항 알림",
-    date: "1일전",
-    state: "notice",
-  },
-];
-const AlarmPanel = ({ className }: HeaderActions) => {
-  const unreadCount = notificationData.length;
   return (
     <NotificationRoot className={className}>
       <NotificationHeader className="notification__header">
@@ -42,7 +29,7 @@ const AlarmPanel = ({ className }: HeaderActions) => {
       </NotificationHeader>
       <NotificationBody className="notification__body">
         <NotificationList className="notification__list" role="list">
-          {notificationData.map((item) => (
+          {notifications.map((item) => (
             <li className="notification__item" key={item.id}>
               <div className="notification__item-main">
                 <span
@@ -61,6 +48,7 @@ const AlarmPanel = ({ className }: HeaderActions) => {
                 icon={<i className="ri-close-line"></i>}
                 variant="ghost"
                 aria-label="알림 닫기"
+                onClick={() => handleDelete(item.id)}
               ></Button>
             </li>
           ))}
@@ -73,4 +61,4 @@ const AlarmPanel = ({ className }: HeaderActions) => {
   );
 };
 
-export default AlarmPanel;
+export default NotificationPanel;

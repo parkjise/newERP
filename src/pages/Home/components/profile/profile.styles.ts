@@ -79,7 +79,7 @@ export const ProfileContact = styled.address`
         background-color: ${({ theme }) => theme.colors.grey[300]};
         i {
           ${text("14px")}
-          color: ${({ theme }) => theme.colors.white};
+          color: ${({ theme }) => theme.colors.common[100]};
           line-height: 24px;
         }
       }

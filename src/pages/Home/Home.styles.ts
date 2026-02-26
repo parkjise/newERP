@@ -31,14 +31,7 @@ export const DashboardLayout = styled.div`
       &:hover {
         box-shadow: 5px 25px 35px rgba(0, 0, 0, 0.08);
       }
-      .widget__head {
-        width: 100%;
-        ${flex("center", "space-between")}
-      }
-      .widget__title {
-        ${text("15px", 500)}
-        color: ${({ theme }) => theme.colors.neutral[800]};
-      }
+
       .widget__body {
         width: 100%;
         height: 100%;

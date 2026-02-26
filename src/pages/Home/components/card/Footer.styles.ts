@@ -6,7 +6,7 @@ export const CardusageFooter = styled.footer`
     &__footer {
     }
     &__last-usage {
-      color: ${({ theme }) => theme.colors.white};
+      color: ${({ theme }) => theme.colors.common[100]};
       ${flex("center", "space-between")}
       &-row {
         ${flex("center", "flex-start", "row", "10px")}
@@ -17,6 +17,12 @@ export const CardusageFooter = styled.footer`
       &-value {
         ${text("12px", 300)}
       }
+    }
+    &__merchant {
+      ${text("13px", 400)}
+    }
+    &__amount {
+      ${text("13px", 400)}
     }
   }
 `;
