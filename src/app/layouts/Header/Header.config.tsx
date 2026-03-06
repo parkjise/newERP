@@ -79,18 +79,21 @@ export const notificationData: NotificationItem[] = [
     title: "업데이트 알림",
     date: "1일전",
     state: "update",
+    isRead: false,
   },
   {
     id: 2,
     title: "공지사항 알림",
     date: "1일전",
     state: "notice",
+    isRead: false,
   },
   {
     id: 3,
     title: "공지사항 ",
     date: "3일전",
     state: "notice",
+    isRead: true,
   },
 ];
 

@@ -1,11 +1,11 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import {
   absoluteInset,
   remixiFont,
   flex,
   pillBackground,
 } from "@/styles/mixins/index";
-import type { theme } from "antd";
+
 export const SideBarNavRoot = styled.nav`
   width: 100%;
 `;
@@ -39,33 +39,6 @@ export const NavLink = styled.a<{ $active?: boolean }>`
   &:hover::before {
     color: ${({ theme }) => theme.menuActiveIcon};
   }
-
-  /* &:hover::after {
-    ${pillBackground}
-    background-color: ${({ theme }) => theme.menuOverBg};
-  }
-
-  &:hover::before {
-    color: ${({ $active, theme }) =>
-    $active ? theme.menuOverBg : theme.menuIcon};
-  } */
-
-  /* ${({ $active, theme }) =>
-    $active &&
-    css`
-      &::after {
-        ${pillBackground}
-        background-color: ${theme.menuActiveBg};
-      }
-
-      &::before {
-        color: ${theme.menuOverBg};
-      }
-
-      &:hover::after {
-        background-color: ${theme.accent.secondary};
-      }
-    `} */
 `;
 
 export const NavIcon = styled.span`

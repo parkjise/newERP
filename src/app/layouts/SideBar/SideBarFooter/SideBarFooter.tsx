@@ -1,5 +1,6 @@
 import { SideBarFooterRoot, CollapseButton } from "./SideBarFooter.styles";
-const SideBarFooter = () => {
+import type { SideBarFooterProps } from "@/app/layouts/SideBar/SideBar.types";
+const SideBarFooter = ({ onClick }: SideBarFooterProps) => {
   return (
     <SideBarFooterRoot className="sidebar__footer">
       <CollapseButton
@@ -9,6 +10,7 @@ const SideBarFooter = () => {
         aria-expanded="true"
         aria-controls="sidebar-nav"
         ghost={false}
+        onClick={onClick}
       />
     </SideBarFooterRoot>
   );

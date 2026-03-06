@@ -10,12 +10,13 @@ import IconWithBadge from "@/components/ui/badge/IconWithBadge";
 import { ThemeColorModal } from "@/components/ui/modal/ThemeColorModal";
 import { HeaderUtilsRoot, HeaderButton } from "./HeaderActions.styles";
 import Notification from "./NotificationPanel";
+import { useNotificationStore } from "@/stores/useNotificationStore";
 const HeaderActions = () => {
+  const unreadCount = useNotificationStore((s) => s.notifications.length);
   // 알림 숫자 변수
   const [notifications, setNotifications] =
     useState<NotificationItem[]>(notificationData);
 
-  const unreadCount = notifications.length;
   const toggleMode = useThemeStore((s) => s.toggleMode);
   const mode = useThemeStore((s) => s.mode);
   // 테마 컬러 모달 상태

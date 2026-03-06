@@ -38,6 +38,9 @@ export const NotificationList = styled.div`
       &-main {
         ${flex("center", "flex-start", "row", "2rem")}
       }
+      &--read {
+        opacity: 0.5;
+      }
     }
     &__icon {
       width: 4rem;

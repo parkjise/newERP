@@ -5,7 +5,8 @@ export const LayoutStyles = styled.div`
   height: 100%;
   background-color: #000;
   ${grid({
-    columns: "220px 1fr",
+    // columns: "220px 1fr",
+    columns: "auto 1fr",
     rows: "60px 1fr",
   })}
   grid-template-areas: "header header" "sidebar main";

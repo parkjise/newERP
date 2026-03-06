@@ -5,13 +5,13 @@ import {
 import { AutoComplete } from "@/components/ui/input";
 const HeaderSearch = () => {
   return (
-    <div className="header__search-group">
+    <div className="header-search">
       <AutoComplete
-        className="ac-center"
+        className="header-search__input"
         options={LOCATION_OPTIONS}
         style={{ width: SEARCH_INPUT_WIDTH }}
         allowClear
-        placeholder="지역을 입력하세요"
+        placeholder="메뉴를 입력하세요"
         prefix={<i className="ri-search-2-line"></i>}
       />
     </div>

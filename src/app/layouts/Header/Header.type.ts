@@ -25,6 +25,7 @@ export interface NotificationItem {
   title: string;
   date: string;
   state: NotificationState;
+  isRead?: Boolean;
 }
 
 export interface NotificationProps extends HeaderActions {

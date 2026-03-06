@@ -18,3 +18,9 @@ export interface SideBarNavItemProps {
 export interface SideBarNavProps {
   menuItems: MenuItem[];
 }
+
+/** collapse 버튼 Props */
+
+export interface SideBarFooterProps {
+  onClick: () => void;
+}

@@ -22,17 +22,20 @@ export const HeaderStyles = styled.header`
         height: 1.9rem;
       }
     }
-    &__search {
-      &-group {
-        ${flex("center", "flex-start")}
-        &:before {
-          content: "";
-          display: inline-flex;
-          width: 0.1rem;
-          height: 3rem;
-          background-color: ${({ theme }) => theme.colors.grey[100]};
-          margin-right: 2rem;
-        }
+    &-search {
+      margin-left: 10px;
+      ${flex("center", "flex-start")}
+      &__input {
+        height: 34px;
+        border-radius: 34px;
+        background-color: ${({ theme }) => theme.colors.neutral[100]};
+        border-color: ${({ theme }) => theme.colors.grey[100]};
+      }
+      .ant-select-placeholder {
+        height: 34px;
+        line-height: 34px;
+        font-size: 13px;
+        padding-left: 5px;
       }
     }
   }
