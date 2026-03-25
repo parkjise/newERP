@@ -104,4 +104,5 @@ export const LOCATION_OPTIONS = [
   { value: "송파" },
 ];
 
-export const SEARCH_INPUT_WIDTH = 200;
+// export const SEARCH_INPUT_WIDTH = 200;
+export const SEARCH_INPUT_WIDTH = 250;
